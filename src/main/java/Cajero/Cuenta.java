@@ -1,14 +1,12 @@
 package Cajero;
 
 public abstract class Cuenta {
-    String user;
-    String pass;
+    int nroCuenta;
     Double saldo;
 
-    public Cuenta(String user, String pass, Double saldo) {
-        user = user;
-        pass = pass;
-        saldo = saldo;
+    public Cuenta(int nroCuenta, Double saldo) {
+        this.nroCuenta = nroCuenta;
+        this.saldo = saldo;
     }
 
 
