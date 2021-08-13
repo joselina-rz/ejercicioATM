@@ -10,7 +10,7 @@ public class Main {
         Usuario user1 = new Usuario("usuario", "1234", cajaAhorro, cajaDolares, cuentaCo);
         Cajero cajero = new Cajero();
 
-        cajero.autenticacion(user1);
+        cajero.identificacion(user1);
         
     }
 

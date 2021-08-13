@@ -35,7 +35,7 @@ public class Cajero {
 
     }
 
-    public void autenticacion(Usuario user1) {
+    public void identificacion(Usuario user1) {
         boolean band = true;
         while (band){
             Scanner sc = new Scanner(System.in);
