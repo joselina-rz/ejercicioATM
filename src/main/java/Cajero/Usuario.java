@@ -1,5 +1,7 @@
 package Cajero;
 
+import java.util.Scanner;
+
 public class Usuario {
 
     private String user;
@@ -20,39 +22,40 @@ public class Usuario {
         return user;
     }
 
-    public void setUser(String user) {
-        this.user = user;
-    }
-
     public String getPass() {
         return pass;
-    }
-
-    public void setPass(String pass) {
-        this.pass = pass;
     }
 
     public CajaAhorroDolares getDolares() {
         return dolares;
     }
 
-    public void setDolares(CajaAhorroDolares dolares) {
-        this.dolares = dolares;
-    }
-
     public CajaAhorroPesos getPesos() {
         return pesos;
-    }
-
-    public void setPesos(CajaAhorroPesos pesos) {
-        this.pesos = pesos;
     }
 
     public CuentaCorriente getCcPesos() {
         return ccPesos;
     }
 
-    public void setCcPesos(CuentaCorriente ccPesos) {
-        this.ccPesos = ccPesos;
+    public void cambiarPass(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese contraseña actual");
+        String pwd = sc.nextLine();
+        System.out.println("Ingrese nueva contraseña");
+        String newPwd= sc.nextLine();
+        System.out.println("Repita nueva contraseña");
+        String newPwd2= sc.nextLine();
+        if (pwd.equals(pass)){
+            if (newPwd.equals(newPwd2)){
+                System.out.println("Contraseña modificada con éxito");
+            }else {
+                System.out.println("Las contraseñas no coinciden");
+            }
+        }else {
+            System.out.println("Contraseña actual incorrecta.");
+        }
+
     }
+
 }
